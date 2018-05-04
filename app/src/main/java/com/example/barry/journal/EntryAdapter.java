@@ -19,13 +19,16 @@ public class EntryAdapter extends ResourceCursorAdapter {
         int mood = cursor.getInt(cursor.getColumnIndex("mood"));
         String content = cursor.getString(cursor.getColumnIndex("content"));
         String title = cursor.getString(cursor.getColumnIndex("title"));
+        String time = cursor.getString(cursor.getColumnIndex("time"));
         TextView contentView = view.findViewById(R.id.content);
         TextView titleView = view.findViewById(R.id.title);
+        TextView timeView = view.findViewById(R.id.time);
         ImageView moodView = (ImageView) view.findViewById(R.id.mood);
 
         // set content to view
         contentView.setText(content);
         titleView.setText(title);
+        timeView.setText(time);
 
         if (mood == 1)
             moodView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.emoji1));
