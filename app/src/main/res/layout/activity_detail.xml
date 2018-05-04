@@ -11,6 +11,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
         android:text="TextView" />
 
     <EditText
@@ -18,14 +19,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="time" />
+        android:inputType="time"
+        android:fontFamily="sans-serif-thin" />
 
     <TextView
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="TextView" />
+        android:text="TextView"
+        android:fontFamily="sans-serif" />
 
     <ImageView
         android:id="@+id/mood"
