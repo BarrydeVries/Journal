@@ -9,11 +9,16 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
+    private EntryDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        EntryDatabase db = EntryDatabase.getInstance(getApplicationContext());
+        EntryAdapter adapter = new EntryAdapter(this, db.selectAll());
+        ListView listView = findViewById(R.id.listView);
+        listView.setAdapter(adapter);
 
         ListView lv = findViewById(R.id.listView);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -30,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        EntryDatabase db = EntryDatabase.getInstance(getApplicationContext());
+
+
     }
 
     public void create_button_clicked(View v){

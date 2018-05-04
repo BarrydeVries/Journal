@@ -12,6 +12,7 @@
         android:layout_height="wrap_content">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Title"
@@ -24,10 +25,11 @@
         android:layout_weight="1">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:hint="Description activity"
+            android:hint="Description of activity"
             android:singleLine="true" />
     </android.support.design.widget.TextInputLayout>
 
@@ -37,32 +39,45 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/Mood1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:onClick="mood_button_1"
+            app:srcCompat="@drawable/emoji1"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"/>
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/Mood2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:onClick="mood_button_2"
+            app:srcCompat="@drawable/emoji2"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"/>
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/Mood3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:onClick="mood_button_3"
+            app:srcCompat="@drawable/emoji3"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"/>
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/Mood4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:onClick="mood_button_4"
+            app:srcCompat="@drawable/emoji4"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            />
     </LinearLayout>
 
     <ImageButton
@@ -71,5 +86,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:onClick="confirm_button_clicked"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/submit"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        />
 </LinearLayout>

@@ -6,12 +6,10 @@ public class JournalEntry implements Serializable {
     private int id, mood;
     private String title, content, timestamp;
 
-    public JournalEntry(int id, int mood, String title, String content, String timestamp) {
-        this.id = id;
+    public JournalEntry(int mood, String title, String content) {
         this.mood = mood;
         this.title = title;
         this.content = content;
-        this.timestamp = timestamp;
     }
 
     public int getId() {
