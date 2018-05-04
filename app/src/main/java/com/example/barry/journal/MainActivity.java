@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        EntryDatabase db = EntryDatabase.getInstance(getApplicationContext());
     }
 
     public void create_button_clicked(View v){
