@@ -19,7 +19,7 @@ public class EntryAdapter extends ResourceCursorAdapter {
         int mood = cursor.getInt(cursor.getColumnIndex("mood"));
         String content = cursor.getString(cursor.getColumnIndex("content"));
         String title = cursor.getString(cursor.getColumnIndex("title"));
-        String time = cursor.getString(cursor.getColumnIndex("time"));
+        String time = cursor.getString(cursor.getColumnIndex("timestamp"));
         TextView contentView = view.findViewById(R.id.content);
         TextView titleView = view.findViewById(R.id.title);
         TextView timeView = view.findViewById(R.id.time);

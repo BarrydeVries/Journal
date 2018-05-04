@@ -25,7 +25,17 @@ public class MainActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Cursor cursorToJournal = (Cursor) parent.getItemAtPosition(position);
+                int mood = cursorToJournal.getInt(cursorToJournal.getColumnIndex("mood"));
+                String title = cursorToJournal.getString(cursorToJournal.getColumnIndex("title"));
+                String content = cursorToJournal.getString(cursorToJournal.getColumnIndex("content"));
+                String timestamp = cursorToJournal.getString(cursorToJournal.getColumnIndex("timestamp"));
+
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                intent.putExtra("mood", mood);
+                intent.putExtra("title", title);
+                intent.putExtra("content", content);
+                intent.putExtra("timestamp", timestamp);
                 startActivity(intent);
 
             }
